@@ -1,4 +1,4 @@
-import FramerMotionPage1 from "./framer-motion-1/page";
+import FramerMotionPage1 from './framer-motion-1/page';
 
 export default function Home() {
   return (
