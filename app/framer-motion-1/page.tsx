@@ -18,7 +18,7 @@ const FramerMotionPage1 = () => {
   }
   return (
     <section className="*:rounded-lg *:m-3 overflow-x-hidden p-6">
-      <motion.div id="BOX___1" className="bg-orange-500 size-32" initial={{ scale: 0 }} animate={{ scale: 1, rotate: 360, when: 'beforeChildren' }}></motion.div>
+      <motion.div id="BOX___1" className="bg-orange-500 size-32" initial={{ scale: 0 }} animate={{ scale: 1, rotate: 360 }}></motion.div>
       <motion.div variants={AnimationVariants} id="BOX___1" className="bg-red-500 size-32" initial="hidden" animate="visible" whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.03 }}></motion.div>
       <motion.div id="BOX___1" className="bg-violet-500 size-32" initial={{ rotate: 0 }} animate={{ rotate: 360, x: 350 }} transition={{ duration: 2, ease: 'backOut', bounce: 0.2, delay: 0.5 }}></motion.div>
       <AnimatePresence>{show ? <motion.div exit={{ opacity: 0 }} initial={{ opacity: 1 }} transition={{ duration: 0.5 }} className="bg-yellow-500 size-32" /> : null}</AnimatePresence>
