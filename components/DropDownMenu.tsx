@@ -38,7 +38,7 @@ const DropDownMenu = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.ul className="bg-zinc-700 rounded p-4 space-y-2 overflow-hidden" initial="hidden" animate="visible" exit="hidden" variants={menuVariants}>
-            {['Home', 'About', 'Services', 'Contact'].map((item) => (
+            {['Home', 'About', 'Services', 'Contact'].map(item => (
               <motion.li key={item} variants={itemVariants} className="p-2 bg-zinc-950 text-white rounded shadow">
                 {item}
               </motion.li>
