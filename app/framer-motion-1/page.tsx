@@ -7,6 +7,7 @@ const FramerMotionPage1 = () => {
   const { scrollYProgress } = useScroll();
 
   const [show, setShow] = useState(false);
+  const [show2, setShow2] = useState(false);
 
   // ^ VARIANTS
   const AnimationVariants = {
@@ -34,12 +35,18 @@ const FramerMotionPage1 = () => {
           TOGGLE
         </button>
 
-        <AnimatePresence>{show ? <motion.div exit={{ opacity: 0 }} initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 1.5, ease: 'backOut', bounce: 0.2 } }} className="bg-yellow-500 size-[150px] mx-auto" /> : null}</AnimatePresence>
+        <AnimatePresence>{show ? <motion.div exit={{ opacity: 0 }} initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 1.5, ease: 'backOut', bounce: 0.2 } }} whileTap={{ scale: 0.93 }} whileHover={{ scale: 1.03 }} className="bg-yellow-500 size-[150px] mx-auto" /> : null}</AnimatePresence>
       </div>
 
       {/* //^ VARIANT ^// */}
       <Variants />
-
+      {/* //^ ANIMATE PRESENCE --- SHOW 2 */}
+      <div className="p-3 rounded border border-zinc-800 space-y-3 *:rounded-lg min-h-[228px] w-44">
+        <button onClick={() => setShow2(prev => !prev)} className="text-white px-4 py-2 bg-emerald-600 w-full">
+          SHOW 2
+        </button>
+        <AnimatePresence>{show2 ? <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 0.3 } }} exit={{ opacity: 0, transition: { duration: 0.3 } }} className="size-32 !rounded-full bg-white mx-auto mt-3"></motion.div> : null}</AnimatePresence>
+      </div>
       {/* //^ LONG DIV ^// */}
       <LongDiv />
 
