@@ -4,7 +4,6 @@ import { AnimatePresence, motion, useScroll } from 'motion/react';
 import Variants from '@/components/Variants';
 
 const FramerMotionPage1 = () => {
-  
   const { scrollYProgress } = useScroll();
 
   const [show, setShow] = useState(false);
