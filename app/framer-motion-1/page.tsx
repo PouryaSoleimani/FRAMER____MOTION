@@ -4,7 +4,9 @@ import { AnimatePresence, motion, useScroll } from 'motion/react';
 import Variants from '@/components/Variants';
 
 const FramerMotionPage1 = () => {
+  
   const { scrollYProgress } = useScroll();
+
   const [show, setShow] = useState(false);
 
   // ^ VARIANTS
@@ -25,11 +27,12 @@ const FramerMotionPage1 = () => {
       <motion.div variants={AnimationVariants} id="BOX___1" className="bg-red-500 size-32" initial="hidden" animate="visible" whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.03 }}></motion.div>
       <motion.div id="BOX___1" className="bg-violet-500 size-32" initial={{ rotate: 0 }} animate={{ rotate: 360, x: 350 }} transition={{ duration: 2, ease: 'backOut', bounce: 0.2, delay: 0.5 }}></motion.div>
       {/* //^ AnimatePresence ^// */}
-      <AnimatePresence>{show ? <motion.div exit={{ opacity: 0 }} initial={{ opacity: 1 }} transition={{ duration: 0.5 }} className="bg-yellow-500 size-32" /> : null}</AnimatePresence>
-      <button onClick={showHandler} className="text-white px-4 py-2 bg-emerald-600">
-        TOGGLE
-      </button>
-
+      <div className="p-3 rounded border border-zinc-800 space-y-3 *:rounded-lg min-h-[228px] w-44">
+        <button onClick={showHandler} className="text-white px-4 py-2 bg-emerald-600 w-full">
+          TOGGLE
+        </button>
+        <AnimatePresence>{show ? <motion.div exit={{ opacity: 0 }} initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 1.5, ease: 'backOut', bounce: 0.2 } }} className="bg-yellow-500 size-[150px] mx-auto" /> : null}</AnimatePresence>
+      </div>
       {/* //^ VARIANT ^// */}
       <Variants />
       {/* //^ LONG DIV ^// */}
