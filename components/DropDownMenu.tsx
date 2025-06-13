@@ -17,7 +17,6 @@ const DropDownMenu = () => {
       opacity: 0,
       transition: { when: 'afterChildren', staggerChildren: 0.05, staggerDirection: -1 },
     },
-
   };
 
   const itemVariants = {
@@ -28,14 +27,8 @@ const DropDownMenu = () => {
   // ^ RETURN ______________________________________________________________________________________________________________________________________________________
   return (
     <div className="p-10">
-
-      <div className='border p-4 rounded-lg border-zinc-700 h-[330px]'>
-        <motion.button
-          onClick={() => setIsOpen(prev => !prev)}
-          className="bg-indigo-600 text-white p-3 rounded mb-4"
-          whileHover={{ scale: 1.05, backgroundColor: "darkgreen", }}
-          whileTap={{ backgroundColor: "red" }}
-        >
+      <div className="border p-4 rounded-lg border-zinc-700 h-[330px]">
+        <motion.button onClick={() => setIsOpen(prev => !prev)} className="bg-indigo-600 text-white p-3 rounded mb-4" whileHover={{ scale: 1.05, backgroundColor: 'darkgreen' }} whileTap={{ backgroundColor: 'red' }}>
           Toggle Menu
         </motion.button>
 
@@ -58,11 +51,10 @@ const DropDownMenu = () => {
           scale: [1, 2, 1],
           rotate: [0, 90, 0],
           borderRadius: ['0%', '50%', '0%'],
-          transition: { duration: 1.5, times: [0, 0.5, 1] }
+          transition: { duration: 1.5, times: [0, 0.5, 1] },
         }}
         className="size-32 bg-white my-16"
-      >
-      </motion.div>
+      ></motion.div>
 
       <Variants2 />
 
@@ -80,9 +72,7 @@ const DropDownMenu = () => {
           transition: { duration: 2, ease: 'backOut' },
         }}
         className="size-64 mb-32 bg-teal-500"
-      >
-      </motion.div>
-
+      ></motion.div>
     </div>
   );
 };
