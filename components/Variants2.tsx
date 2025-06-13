@@ -9,9 +9,9 @@ const AnimationVariants2 = {
 const Variants2 = () => {
   return (
     <div className="flex flex-col gap-10">
-      <motion.div className="size-32 bg-red-600" variants={AnimationVariants2} initial="initial" animate="animate"></motion.div>
-      <motion.div className="size-32 bg-blue-600" variants={AnimationVariants2} initial="initial" animate="animate"></motion.div>
-      <motion.div className="size-32 bg-yellow-600" variants={AnimationVariants2} initial="initial" animate="animate"></motion.div>
+      <motion.div className="size-32 bg-indigo-600" variants={AnimationVariants2} initial="initial" animate="animate"></motion.div>
+      <motion.div className="size-32 bg-violet-600" variants={AnimationVariants2} initial="initial" animate="animate"></motion.div>
+      <motion.div className="size-32 bg-cyan-600" variants={AnimationVariants2} initial="initial" animate="animate"></motion.div>
     </div>
   );
 };

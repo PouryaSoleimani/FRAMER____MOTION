@@ -46,6 +46,7 @@ const DropDownMenu = () => {
       <motion.div animate={{ x: [0, 500, 0], scale: [1, 2, 1], rotate: [0, 90, 0], borderRadius: ['0%', '50%', '0%'], transition: { duration: 1.5, times: [0, 0.5, 1] } }} className="size-32 bg-white my-16" />
 
       <Variants2 />
+      
     </div>
   );
 };
