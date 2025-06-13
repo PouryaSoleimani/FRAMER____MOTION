@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import Variants2 from './Variants2';
 
 const DropDownMenu = () => {
+
   const [isOpen, setIsOpen] = useState(false);
 
   const menuVariants = {
