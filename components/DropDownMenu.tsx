@@ -30,9 +30,14 @@ const DropDownMenu = () => {
     <div className="p-10">
 
       <div className='border p-4 rounded-lg border-zinc-700 h-[330px]'>
-        <button onClick={() => setIsOpen(prev => !prev)} className="bg-indigo-600 text-white p-3 rounded mb-4">
+        <motion.button
+          onClick={() => setIsOpen(prev => !prev)}
+          className="bg-indigo-600 text-white p-3 rounded mb-4"
+          whileHover={{ scale: 1.05, backgroundColor: "darkgreen", }}
+          whileTap={{ backgroundColor: "red" }}
+        >
           Toggle Menu
-        </button>
+        </motion.button>
 
         <AnimatePresence>
           {isOpen && (
