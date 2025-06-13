@@ -48,6 +48,8 @@ const DropDownMenu = () => {
           </motion.ul>
         )}
       </AnimatePresence>
+
+      <motion.div animate={{ x: [0, 300, 0], rotate: [0, 90, 0], borderRadius: ['0%', '50%', '0%'] }} className="size-32 bg-white" />
     </div>
   );
 };
