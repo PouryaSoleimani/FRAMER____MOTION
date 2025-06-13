@@ -51,8 +51,14 @@ const FramerMotionPage1 = () => {
       <LongDiv />
 
       {/* //^ ON SCROLL ANIMATION */}
+      {/* SCROLL BASE ANIMATIONS */}
       <motion.div className="fixed -top-3 h-2 right-0 left-0 bg-white" style={{ scaleX: scrollYProgress, originX: 0 }}></motion.div>
+      <motion.div variants={AnimationVariants} initial="hidden" animate="visible" className="!rounded-full bg-amber-500 size-44 my-10"></motion.div>
+      <motion.div variants={AnimationVariants} initial="hidden" animate="visible" className="!rounded-full bg-red-500 size-44 my-10"></motion.div>
+      <motion.div variants={AnimationVariants} initial="hidden" animate="visible" className="!rounded-full bg-blue-500 size-44 my-10"></motion.div>
+      <motion.div variants={AnimationVariants} initial="hidden" animate="visible" className="!rounded-full bg-green-500 size-44 my-10"></motion.div>
       <motion.div id="BOX___1" className="bg-rose-500 size-32" initial={{ opacity: 0 }} whileInView={{ opacity: 1, rotate: 180 }} transition={{ duration: 1.2, ease: 'backOut', bounce: 0.2, delay: 0.3 }}></motion.div>
+      <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1, rotate: 360, transition: { duration: 2.5, ease: 'backOut' } }} className="size-32 rounded-md bg-zinc-500"></motion.div>
     </section>
   );
 };
