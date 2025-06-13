@@ -2,7 +2,7 @@
   "singleQuote": true,
   "semi": true,
   "trailingComma": "all",
-  "printWidth": 350,
+  "printWidth": 900,
   "singleAttributePerLine": false,
   "htmlWhitespaceSensitivity": "ignore",
   "arrowParens": "avoid"
