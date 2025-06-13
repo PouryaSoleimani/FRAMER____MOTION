@@ -48,8 +48,8 @@ const DropDownMenu = () => {
       <Variants2 />
       <div id="LONG____DIV" className="h-[3000px]"></div>
       <motion.div
-        initial={{ opacity: 0, rotate: 0, x: 0, borderRadius: 0 }}
-        whileInView={{ opacity: 1, rotate: [0, 90, 0], x: [0, 200, 0], borderRadius: ["0%", "100%", "0%"], scale: [1, 2, 1], transition: { duration: 2, ease: "backOut" } }}
+        initial={{ opacity: 0, rotate: 0, x: 50, borderRadius: 0 }}
+        whileInView={{ opacity: 1, rotate: [0, 90, 0], x: [0, 500, 0], borderRadius: ["0%", "100%", "0%"], scale: [1, 1.5, 1], transition: { duration: 2, ease: "backOut" } }}
         className='size-64 bg-teal-500 mb-32'
       ></motion.div>
     </div>
