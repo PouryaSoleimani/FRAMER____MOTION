@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 
 const DropDownMenu = () => {
-  
   const [isOpen, setIsOpen] = useState(false);
 
   const menuVariants = {
