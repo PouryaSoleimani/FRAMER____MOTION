@@ -4,6 +4,7 @@ import { AnimatePresence, motion, useScroll } from 'motion/react';
 import Variants from '@/components/Variants';
 
 const FramerMotionPage1 = () => {
+  
   const { scrollYProgress } = useScroll();
 
   const [show, setShow] = useState(false);
@@ -32,13 +33,14 @@ const FramerMotionPage1 = () => {
         </button>
         <AnimatePresence>{show ? <motion.div exit={{ opacity: 0 }} initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 1.5, ease: 'backOut', bounce: 0.2 } }} className="bg-yellow-500 size-[150px] mx-auto" /> : null}</AnimatePresence>
       </div>
+      <motion.div className="bg-pink-600 size-32 rounded-full" style={{ scaleX: scrollYProgress }}></motion.div>
       {/* //^ VARIANT ^// */}
       <Variants />
       {/* //^ LONG DIV ^// */}
       <LongDiv />
 
       {/* //^ ON SCROLL ANIMATION */}
-      <motion.div className="bg-[#ff0088] fixed -top-2 left-0 right-0 h-4" id="scroll-indicator" style={{ scaleX: scrollYProgress, originX: 0 }} />
+      <motion.div className="bg-[#eaff00] fixed -top-3 left-0 right-0 h-2" id="scroll-indicator" style={{ scaleX: scrollYProgress, originX: 0 }} />
       <motion.div id="BOX___1" className="bg-rose-500 size-32" initial={{ opacity: 0 }} whileInView={{ opacity: 1, rotate: 180 }} transition={{ duration: 1.2, ease: 'backOut', bounce: 0.2, delay: 0.3 }}></motion.div>
     </section>
   );
