@@ -7,6 +7,7 @@ const FramerMotionPage1 = () => {
   const { scrollYProgress } = useScroll();
   const [show, setShow] = useState(false);
 
+  // ^ VARIANTS
   const AnimationVariants = {
     hidden: { opacity: 0, x: -100 },
     visible: { opacity: 1, x: 50, transition: { duration: 2, ease: 'backInOut' } },
@@ -16,6 +17,8 @@ const FramerMotionPage1 = () => {
   function showHandler() {
     setShow(prev => !prev);
   }
+
+  // ^ RETURN
   return (
     <section className="*:rounded-lg *:m-3 overflow-x-hidden p-6">
       <motion.div id="BOX___1" className="bg-orange-500 size-32" initial={{ scale: 0 }} animate={{ scale: 1, rotate: 360 }}></motion.div>

@@ -3,12 +3,15 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 
 const DropDownMenu = () => {
+  
+  const [isOpen, setIsOpen] = useState(false);
+
   const menuVariants = {
     hidden: {
       opacity: 0,
       height: 0,
       transition: {
-        when: 'afterChildren', // اول آیتم‌ها مخفی بشن بعد منو
+        when: 'afterChildren',
         staggerChildren: 0.05,
         staggerDirection: -1,
       },
@@ -28,7 +31,7 @@ const DropDownMenu = () => {
     visible: { opacity: 1, x: 0 },
   };
 
-  const [isOpen, setIsOpen] = useState(false);
+  // ^ RETURN ______________________________________________________________________________________________________________________________________________________
   return (
     <div className="p-10">
       <button onClick={() => setIsOpen(prev => !prev)} className="bg-indigo-600 text-white p-3 rounded mb-4">
