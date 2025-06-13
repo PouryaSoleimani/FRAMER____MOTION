@@ -7,16 +7,17 @@ const DropDownMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuVariants = {
-    hidden: {
-      opacity: 0,
-      height: 0,
-      transition: { when: 'afterChildren', staggerChildren: 0.05, staggerDirection: -1 },
-    },
     visible: {
       opacity: 1,
       height: '220px',
       transition: { when: 'beforeChildren', staggerChildren: 0.1 },
     },
+    hidden: {
+      opacity: 0,
+      height: 0,
+      transition: { when: 'afterChildren', staggerChildren: 0.05, staggerDirection: -1 },
+    },
+
   };
 
   const itemVariants = {
