@@ -51,7 +51,7 @@ const FramerMotionPage1 = () => {
       <LongDiv />
 
       {/* //^ ON SCROLL ANIMATION */}
-      <motion.div className="bg-[#eaff00] fixed -top-3 left-0 right-0 h-2" id="scroll-indicator" style={{ scaleX: scrollYProgress, originX: 0 }} />
+      <motion.div className="fixed -top-3 h-2 right-0 left-0 bg-white" style={{ scaleX: scrollYProgress, originX: 0 }}></motion.div>
       <motion.div id="BOX___1" className="bg-rose-500 size-32" initial={{ opacity: 0 }} whileInView={{ opacity: 1, rotate: 180 }} transition={{ duration: 1.2, ease: 'backOut', bounce: 0.2, delay: 0.3 }}></motion.div>
     </section>
   );
