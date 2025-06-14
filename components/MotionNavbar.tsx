@@ -11,7 +11,7 @@ const MotionNavbar = () => {
         visible: {
             opacity: 1,
             y: 0,
-            transition: { when: 'beforeChildren', staggerChildren: 0.06, ease: "backOut" }
+            transition: { when: 'beforeChildren', staggerChildren: 0.1, ease: "backOut" }
         },
     };
 
