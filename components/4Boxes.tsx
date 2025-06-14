@@ -28,11 +28,11 @@ const BoxesComponent = () => {
                 initial="hidden"
                 animate="visible"
             >
-                <motion.span className='w-1/6 h-32 rounded-xl bg-red-600' variants={ChildVariants}></motion.span>
-                <motion.span className='w-1/6 h-32 rounded-xl bg-blue-600' variants={ChildVariants}></motion.span>
-                <motion.span className='w-1/6 h-32 rounded-xl bg-orange-600' variants={ChildVariants}></motion.span>
-                <motion.span className='w-1/6 h-32 rounded-xl bg-indigo-600' variants={ChildVariants}></motion.span>
-                <motion.span className='w-1/6 h-32 rounded-xl bg-teal-600' variants={ChildVariants}></motion.span>
+                <motion.span className='w-1/6 h-44 rounded-xl bg-red-600' variants={ChildVariants}></motion.span>
+                <motion.span className='w-1/6 h-44 rounded-xl bg-blue-600' variants={ChildVariants}></motion.span>
+                <motion.span className='w-1/6 h-44 rounded-xl bg-orange-600' variants={ChildVariants}></motion.span>
+                <motion.span className='w-1/6 h-44 rounded-xl bg-indigo-600' variants={ChildVariants}></motion.span>
+                <motion.span className='w-1/6 h-44 rounded-xl bg-teal-600' variants={ChildVariants}></motion.span>
             </motion.div>
         </div>
     )
