@@ -4,7 +4,11 @@ import { motion } from 'motion/react'
 
 const BoxesComponent = () => {
     const ParentVariants = {
-        hidden: { y: -100, opacity: 0 },
+        hidden: {
+            y: -100,
+            opacity: 0
+        },
+
         visible: {
             y: 0,
             opacity: 1,
