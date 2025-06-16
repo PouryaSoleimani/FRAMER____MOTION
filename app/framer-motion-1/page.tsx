@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 import React, { useState } from 'react';
 import { AnimatePresence, motion, useScroll } from 'motion/react';
@@ -21,55 +22,35 @@ const FramerMotionPage1 = () => {
   function showHandler() {
     setShow(prev => !prev);
   }
-
+  const items = ['آیتم ۱', 'آیتم ۲', 'آیتم ۳'];
   // RETURN
   return (
     <section className="*:rounded-lg *:m-3 overflow-x-hidden p-6">
+      <motion.div id="BOX___1" className="bg-orange-500 size-32" initial={{ scale: 0 }} animate={{ scale: 1, rotate: 180, transition: { ease: 'backOut', duration: 2 } }}></motion.div>
 
-      <motion.div
-        id="BOX___1"
-        className="bg-orange-500 size-32"
-        initial={{ scale: 0 }}
-        animate={{ scale: 1, rotate: 180, transition: { ease: 'backOut', duration: 2 } }}
-      >
+      <motion.div id="BOX___1" className="bg-red-500 size-32" whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.03 }}></motion.div>
+      <motion.div className="bg-blue-500 size-32 rounded-lg text-xl grid place-items-center font-bold tracking-tighter" initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ type: 'spring', stiffness: 260, damping: 20, duration: 1.5, ease: 'backOut' }}>
+        SPRING DIV
       </motion.div>
-
-      <motion.div
-        variants={AnimationVariants}
-        id="BOX___1"
-        className="bg-red-500 size-32"
-        initial="hidden"
-        animate="visible"
-        whileTap={{ scale: 0.95 }}
-        whileHover={{ scale: 1.03 }}>
+      <motion.div id="BOX___1" className="bg-violet-500 size-32" initial={{ rotate: 0 }} animate={{ rotate: 360, x: 350 }} transition={{ duration: 2, ease: 'backOut', bounce: 0.2, delay: 0.5 }}></motion.div>
+      <motion.div id="BOX___1" className="bg-emerald-500 size-32" initial={{ rotate: 0 }} animate={{ rotate: [0, 180, 0], x: [0, 350, 0] }} transition={{ repeat: Infinity, repeatType: 'loop', duration: 2, ease: 'backOut', bounce: 0.2 }}>
+        KEY FRAME BOX
       </motion.div>
-
-      <motion.div
-        id="BOX___1"
-        className="bg-violet-500 size-32"
-        initial={{ rotate: 0 }}
-        animate={{ rotate: 360, x: 350 }}
-        transition={{ duration: 2, ease: 'backOut', bounce: 0.2, delay: 0.5 }}
-      >
-      </motion.div>
-
+      <h2 className="text-4xl font-bold ">LIST ANIMATION :</h2>
+      <ul id="LIST____ANIMATIONS" className="my-10">
+        {items.map((item, i) => (
+          <motion.li key={i} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.2 }} className="bg-white my-3">
+            {item}
+          </motion.li>
+        ))}
+      </ul>
       {/*  AnimatePresence */}
       <div className="p-3 rounded border border-zinc-800 space-y-3 *:rounded-lg min-h-[228px] w-44">
+        <button onClick={showHandler} className="text-white px-4 py-2 bg-emerald-600 w-full">
+          TOGGLE
+        </button>
 
-        <button onClick={showHandler} className="text-white px-4 py-2 bg-emerald-600 w-full"> TOGGLE </button>
-
-        <AnimatePresence>
-          {show ?
-            <motion.div
-              exit={{ opacity: 0 }}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1, transition: { duration: 1.5, ease: 'backOut', bounce: 0.2 } }}
-              whileTap={{ scale: 0.93 }}
-              whileHover={{ scale: 1.03 }}
-              className="bg-yellow-500 size-[150px] mx-auto"
-            /> : null}
-        </AnimatePresence>
-
+        <AnimatePresence>{show ? <motion.div exit={{ opacity: 0 }} initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 1.5, ease: 'backOut', bounce: 0.2 } }} whileTap={{ scale: 0.93 }} whileHover={{ scale: 1.03 }} className="bg-yellow-500 size-[150px] mx-auto" /> : null}</AnimatePresence>
       </div>
 
       {/*  VARIANT */}
@@ -77,15 +58,11 @@ const FramerMotionPage1 = () => {
       {/*  ANIMATE PRESENCE --- SHOW 2 */}
 
       <div className="p-3 rounded border border-zinc-800 space-y-3 *:rounded-lg min-h-[228px] w-44">
-        <button onClick={() => setShow2(prev => !prev)} className="text-white px-4 py-2 bg-emerald-600 w-full"> SHOW 2 </button>
-        <AnimatePresence>
-          {show2 ?
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1, transition: { duration: 0.3 } }}
-              exit={{ opacity: 0, transition: { duration: 0.3 } }}
-              className="size-32 !rounded-full bg-white mx-auto mt-3"></motion.div> : null}
-        </AnimatePresence>
+        <button onClick={() => setShow2(prev => !prev)} className="text-white px-4 py-2 bg-emerald-600 w-full">
+          {' '}
+          SHOW 2{' '}
+        </button>
+        <AnimatePresence>{show2 ? <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 0.3 } }} exit={{ opacity: 0, transition: { duration: 0.3 } }} className="size-32 !rounded-full bg-white mx-auto mt-3"></motion.div> : null}</AnimatePresence>
       </div>
 
       {/*  LONG DIV */}
@@ -94,25 +71,14 @@ const FramerMotionPage1 = () => {
       {/*  ON SCROLL ANIMATION */}
       {/* SCROLL BASE ANIMATIONS */}
       <motion.div className="fixed -top-3 h-2 right-0 left-0 bg-white" style={{ scaleX: scrollYProgress, originX: 0 }}></motion.div>
-      <motion.div variants={AnimationVariants} initial="hidden" animate="visible" className="!rounded-full bg-amber-500 size-44 my-10"></motion.div>
-      <motion.div variants={AnimationVariants} initial="hidden" animate="visible" className="!rounded-full bg-red-500 size-44 my-10"></motion.div>
-      <motion.div variants={AnimationVariants} initial="hidden" animate="visible" className="!rounded-full bg-blue-500 size-44 my-10"></motion.div>
-      <motion.div variants={AnimationVariants} initial="hidden" animate="visible" className="!rounded-full bg-green-500 size-44 my-10"></motion.div>
+      <motion.div variants={AnimationVariants as any} initial="hidden" animate="visible" className="!rounded-full bg-amber-500 size-44 my-10"></motion.div>
+      <motion.div variants={AnimationVariants as any} initial="hidden" animate="visible" className="!rounded-full bg-red-500 size-44 my-10"></motion.div>
+      <motion.div variants={AnimationVariants as any} initial="hidden" animate="visible" className="!rounded-full bg-blue-500 size-44 my-10"></motion.div>
+      <motion.div variants={AnimationVariants as any} initial="hidden" animate="visible" className="!rounded-full bg-green-500 size-44 my-10"></motion.div>
 
-      <motion.div id="BOX___1" className="bg-rose-500 size-32"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1, rotate: 180 }}
-        transition={{ duration: 1.2, ease: 'backOut', bounce: 0.2, delay: 0.3 }}
-      >
-      </motion.div>
+      <motion.div id="BOX___1" className="bg-rose-500 size-32" initial={{ opacity: 0 }} whileInView={{ opacity: 1, rotate: 180 }} transition={{ duration: 1.2, ease: 'backOut', bounce: 0.2, delay: 0.3 }}></motion.div>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1, rotate: 360, transition: { duration: 2.5, ease: 'backOut' } }}
-        className="size-32 rounded-md bg-zinc-500"
-      >
-      </motion.div>
-
+      <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1, rotate: 360, transition: { duration: 2.5, ease: 'backOut' } }} className="size-32 rounded-md bg-zinc-500"></motion.div>
     </section>
   );
 };

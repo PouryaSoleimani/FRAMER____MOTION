@@ -10,7 +10,6 @@ const items = [
 ];
 
 export default function SharedLayoutExample() {
-
   const [selectedId, setSelectedId] = useState<any>(null);
 
   return (
