@@ -5,5 +5,8 @@
   "printWidth": 900,
   "singleAttributePerLine": false,
   "htmlWhitespaceSensitivity": "ignore",
-  "arrowParens": "avoid"
+  "arrowParens": "avoid",
+  "bracketSameLine": true,
+  "cursorOffset": -1,
+  "objectWrap": "collapse"
 }
