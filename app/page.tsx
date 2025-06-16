@@ -9,6 +9,7 @@ import SharedLayoutExample from '@/components/SharedLayout';
 import AnimationPresence from '@/components/AnimatePresence';
 import SharedLayout2 from '@/components/SharedLayout2';
 import SharedLayout3 from '@/components/SharedLayout3';
+import SharedLayout4 from '@/components/SharedLayout4';
 
 export default function Home() {
   return (
@@ -25,7 +26,8 @@ export default function Home() {
       <SharedLayout2 />
       <h2 className="bg-stone-400 text-3xl font-black text-center p-3 text-green-900 my-4">SHARED LAYOUT 3</h2>
       <SharedLayout3 />
-
+      <h2 className="bg-stone-400 text-3xl font-black text-center p-3 text-green-900 my-4">SHARED LAYOUT 4</h2>
+      <SharedLayout4 />
       <h2 className="bg-stone-400 text-3xl font-black text-center p-3 text-green-900 my-4">SIMPLE ANIMATIONS</h2>
       <FramerMotionPage1 />
 
