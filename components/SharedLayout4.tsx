@@ -9,23 +9,23 @@ const SharedLayout4 = () => {
       <button className="btn btn-primary my-6" onClick={() => setIsSticky(!isSticky)}>
         STICK TO TOP
       </button>
-      <motion.ul layout className={`navbar bg-black/80 rounded-box backdrop-blur-2xl items-center justify-evenly ${isSticky ? 'fixed w-[90%] mx-auto top-2 border-4 py-5 left-0 right-0 z-50' : ''}`}>
-        <motion.li layout className={`btn text-black ${isSticky ? 'btn-accent w-1/6' : 'btn-secondary'}`}>
+      <motion.div layout className={`navbar bg-black/80 rounded-box backdrop-blur-2xl items-center justify-evenly ${isSticky ? '*:w-fit' : ''}`}>
+        <motion.span layout className={`btn text-black btn-secondary w-1/6`}>
           HOME
-        </motion.li>
-        <motion.li layout className={`btn text-black ${isSticky ? 'btn-accent w-1/6' : 'btn-secondary'}`}>
+        </motion.span>
+        <motion.span layout className={`btn text-black btn-secondary w-1/6`}>
           GALLERY
-        </motion.li>
-        <motion.li layout className={`btn text-black ${isSticky ? 'btn-accent w-1/6' : 'btn-secondary'}`}>
+        </motion.span>
+        <motion.span layout className={`btn text-black btn-secondary w-1/6`}>
           ABOUT
-        </motion.li>
-        <motion.li layout className={`btn text-black ${isSticky ? 'btn-accent w-1/6' : 'btn-secondary'}`}>
+        </motion.span>
+        <motion.span layout className={`btn text-black btn-secondary w-1/6`}>
           CONTACT US
-        </motion.li>
-        <motion.li layout className={`btn text-black ${isSticky ? 'btn-accent w-1/6' : 'btn-secondary'}`}>
+        </motion.span>
+        <motion.span layout className={`btn text-black btn-secondary w-1/6`}>
           PROFILE
-        </motion.li>
-      </motion.ul>
+        </motion.span>
+      </motion.div>
     </div>
   );
 };
