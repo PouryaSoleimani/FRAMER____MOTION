@@ -14,7 +14,7 @@ import SharedLayout4 from '@/components/SharedLayout4';
 export default function Home() {
   return (
     <div className="w-full h-screen p-8 *:rounded-lg">
-      <h2 className="bg-stone-400 text-3xl font-black text-center p-3 text-black my-4">STAGGER</h2>
+      <h2 className="bg-stone-400 text-3xl font-black text-center p-3 text-black my-4">STAGGER</h2> 
       <MotionNavbar />
       <BoxesComponent />
       <CirclesCompoent />
