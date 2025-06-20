@@ -29,7 +29,7 @@ const SharedLayoutPractice2 = () => {
             </div>
             <AnimatePresence>
                 {selectedID && (
-                    <motion.div layoutId={selectedID} className='fixed w-screen h-screen inset-0 bg-black/50 z-50 flex flex-col gap-10 items-center justify-center' transition={{ type: "spring", ease: "backOut" }} onClick={e => e.stopPropagation()}>
+                    <motion.div layoutId={selectedID} className='fixed w-screen h-screen inset-0 bg-black/50 z-50 flex flex-col gap-10 items-center justify-center' transition={{ type: "spring", ease: "backOut" }} onClick={e => e.stopPropagation()} >
                         <motion.span className='btn btn-error text-white text-xl' onClick={() => setSelectedID(null)}>X</motion.span>
                         <div className='bg-black flex flex-col p-10 gap-5 w-1/2 h-1/2 justify-center rounded-xl font-black text-3xl items-center'>
                             <h2>{ITEMS.find(item => item.id == selectedID)?.title}</h2>
@@ -43,3 +43,4 @@ const SharedLayoutPractice2 = () => {
 }
 
 export default SharedLayoutPractice2
+
