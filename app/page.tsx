@@ -19,7 +19,8 @@ export default function Home() {
       <BoxesComponent />
       <CirclesCompoent />
       <Numbers />
-      <AnimationPresence />      <h2 className="bg-stone-400 text-3xl font-black text-center p-3 text-green-900 my-4">SHARED LAYOUT 2</h2>
+      <AnimationPresence />
+      <h2 className="bg-stone-400 text-3xl font-black text-center p-3 text-green-900 my-4">SHARED LAYOUT 2</h2>
       <SharedLayout2 />
       <h2 className="bg-stone-400 text-3xl font-black text-center p-3 text-green-900 my-4">SHARED LAYOUT 3</h2>
       <SharedLayout3 />

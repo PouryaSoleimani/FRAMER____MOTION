@@ -32,7 +32,7 @@ const SharedLayoutPractice3 = () => {
             {selectedID && (
                 <div className='flex flex-col gap-6'>
                     <motion.div layout layoutId={selectedID} className='card bg-black p-6 text-4xl font-bold text-center border-4 border-zinc-700' variants={animationVariant as any} initial="hidden" animate="visible" exit="exit" >
-                        <motion.div layout>
+                        <motion.div>
                             <motion.h2 layout>{ITEMS.find(i => i.id == selectedID)?.title}</motion.h2>
                             <motion.p layout className='text-9xl'>{ITEMS.find(i => i.id == selectedID)?.desc}</motion.p>
                         </motion.div>

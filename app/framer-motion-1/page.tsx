@@ -41,7 +41,7 @@ const FramerMotionPage1 = () => {
       <h2 className="text-4xl font-bold ">LIST ANIMATION :</h2>
       <ul id="LIST____ANIMATIONS" className="my-10">
         {items.map((item, i) => (
-          <motion.li key={i} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.2 }} className="bg-white my-3">
+          <motion.li key={i} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.2 }} className="bg-white my-3 text-black">
             {item}
           </motion.li>
         ))}

@@ -4,9 +4,9 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 
 const items = [
-    { id: "1", title: "Item 1", description: "Details about Item 1", color: "#fb1322" },
-    { id: "2", title: "Item 2", description: "Details about Item 2", color: "#fb1" },
-    { id: "3", title: "Item 3", description: "Details about Item 3", color: "#rg2" }
+    { id: "1", title: "Item 1", description: "🍅", color: "#fb1322" },
+    { id: "2", title: "Item 2", description: "🥬", color: "#fb1" },
+    { id: "3", title: "Item 3", description: "🍎", color: "#rg2" }
 ];
 
 export default function SharedLayoutExample() {
@@ -42,7 +42,7 @@ export default function SharedLayoutExample() {
                             <h3 className="text-xl font-bold mb-4">
                                 {items.find((i) => i.id === selectedId)?.title}
                             </h3>
-                            <p>{items.find((i) => i.id === selectedId)?.description}</p>
+                            <p className="text-9xl text-center">{items.find((i) => i.id === selectedId)?.description}</p>
                         </motion.div>
                     </motion.div>
                 )}
