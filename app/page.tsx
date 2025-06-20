@@ -1,5 +1,5 @@
-//^ HOME PAGE
-// import DropDownMenu from '@/components/DropDownMenu';
+//^ HOME PAGE ========================================================================================================================================================
+import DropDownMenu from '@/components/DropDownMenu';
 import MotionNavbar from '@/components/MotionNavbar';
 import FramerMotionPage1 from './framer-motion-1/page';
 import BoxesComponent from '@/components/4Boxes';
@@ -13,6 +13,7 @@ import SharedLayout4 from '@/components/SharedLayout4';
 export default function Home() {
   return (
     <div className="w-full h-screen p-8 *:rounded-lg">
+      <DropDownMenu />
       <h2 className="bg-stone-400 text-3xl font-black text-center p-3 text-black my-4">STAGGER</h2>
       <MotionNavbar />
       <BoxesComponent />
@@ -26,7 +27,6 @@ export default function Home() {
       <SharedLayout4 />
       <h2 className="bg-stone-400 text-3xl font-black text-center p-3 text-green-900 my-4">SIMPLE ANIMATIONS</h2>
       <FramerMotionPage1 />
-      {/* <DropDownMenu /> */}
     </div>
   );
 }

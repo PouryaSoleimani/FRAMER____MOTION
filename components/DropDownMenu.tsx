@@ -8,16 +8,8 @@ const DropDownMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuVariants = {
-    visible: {
-      height: '220px',
-      opacity: 1,
-      transition: { when: 'beforeChildren', staggerChildren: 0.1 },
-    },
-    hidden: {
-      height: 0,
-      opacity: 0,
-      transition: { when: 'afterChildren', staggerChildren: 0.05, staggerDirection: -1 },
-    },
+    visible: { height: '220px', opacity: 1, transition: { when: 'beforeChildren', staggerChildren: 0.1 }, },
+    hidden: { height: 0, opacity: 0, transition: { when: 'afterChildren', staggerChildren: 0.05, staggerDirection: -1 }, },
   };
 
   const itemVariants = {
@@ -28,8 +20,8 @@ const DropDownMenu = () => {
   // ^ RETURN ______________________________________________________________________________________________________________________________________________________
   return (
     <div className="p-10">
-      <div className="border p-4 rounded-lg border-zinc-700 h-[330px]">
-        <motion.button onClick={() => setIsOpen(prev => !prev)} className="bg-indigo-600 text-white p-3 rounded mb-4" whileHover={{ scale: 1.05, backgroundColor: 'darkgreen' }} whileTap={{ backgroundColor: 'red' }}>
+      <div className="border p-4 rounded-lg border-zinc-700 h-[330px] ">
+        <motion.button onClick={() => setIsOpen(prev => !prev)} className="bg-emerald-600 text-white p-3 rounded mb-4" whileHover={{ scale: 1.05, backgroundColor: 'limegreen' }} whileTap={{ backgroundColor: 'darkgreen' }}>
           Toggle Menu
         </motion.button>
 
