@@ -1,18 +1,13 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 import React from 'react';
 import { motion } from 'motion/react';
 // ^ COMPONENT
 const MotionNavbar = () => {
+    
     const ParentVariants = {
-        hidden: {
-            opacity: 0,
-            y: -50,
-        },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: { when: 'beforeChildren', staggerChildren: 0.1, ease: "backOut" }
-        },
+        hidden: { opacity: 0, y: -50, },
+        visible: { opacity: 1, y: 0, transition: { when: 'beforeChildren', staggerChildren: 0.1, ease: "backOut" } },
     };
 
     const ChildVariants = {
@@ -24,7 +19,7 @@ const MotionNavbar = () => {
         <div>
             <motion.ul
                 className="flex justify-around bg-neutral-900 py-5 rounded-xl"
-                variants={ParentVariants}
+                variants={ParentVariants as any}
                 initial="hidden"
                 animate="visible"
             >

@@ -27,7 +27,7 @@ const FramerMotionPage1 = () => {
   return (
     <section className="*:rounded-lg *:m-3 overflow-x-hidden p-6">
       <motion.div id="BOX___1" className="bg-orange-500 size-32" initial={{ scale: 0 }} animate={{ scale: 1, rotate: 180, transition: { ease: 'backOut', duration: 2 } }}></motion.div>
-
+      <motion.div className='size-44 !rounded-full bg-black' initial={{ opacity: 0 }} animate={{ opacity: 1, x: 100, transition: { type: 'spring', duration: 1.5 } }}></motion.div>
       <motion.div id="BOX___1" className="bg-red-500 size-32" whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.03 }}></motion.div>
       <motion.div className="bg-blue-500 size-32 rounded-lg text-xl grid place-items-center font-bold tracking-tighter" initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ type: 'spring', stiffness: 260, damping: 20, duration: 1.5, ease: 'backOut' }}>
         SPRING DIV
@@ -36,6 +36,7 @@ const FramerMotionPage1 = () => {
       <motion.div id="BOX___1" className="bg-emerald-500 size-32" initial={{ rotate: 0 }} animate={{ rotate: [0, 180, 0], x: [0, 350, 0] }} transition={{ repeat: Infinity, repeatType: 'loop', duration: 2, ease: 'backOut', bounce: 0.2 }}>
         KEY FRAME BOX
       </motion.div>
+
       <h2 className="text-4xl font-bold ">LIST ANIMATION :</h2>
       <ul id="LIST____ANIMATIONS" className="my-10">
         {items.map((item, i) => (
@@ -44,7 +45,8 @@ const FramerMotionPage1 = () => {
           </motion.li>
         ))}
       </ul>
-      {/*  AnimatePresence */}
+
+      {/*  ANIMATE PRESENCE */}
       <div className="p-3 rounded border border-zinc-800 space-y-3 *:rounded-lg min-h-[228px] w-44">
         <button onClick={showHandler} className="text-white px-4 py-2 bg-emerald-600 w-full">
           TOGGLE
