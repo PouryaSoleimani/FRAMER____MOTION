@@ -34,7 +34,7 @@ const SharedLayoutPractice = () => {
                 {selectedId && (
                     <motion.div layoutId={selectedId} className='fixed w-screen h-screen inset-0 bg-black/60 z-50 flex items-center justify-center gap-10 '>
                         <motion.div className='p-20 rounded-lg bg-zinc-900 relative inset-0'>
-                        <span onClick={() => setSelectedId(null)} className='absolute top-4 left-4 cursor-pointer hover:bg-red-800 bg-red-900 text-white size-9 flex items-center justify-center rounded-lg font-black'>X</span>
+                            <span onClick={() => setSelectedId(null)} className='absolute top-4 left-4 cursor-pointer hover:bg-red-800 bg-red-900 text-white size-9 flex items-center justify-center rounded-lg font-black'>X</span>
                             <motion.div className='bg-black p-10 text-3xl gap-5 font-black flex flex-col items-center justify-center rounded-lg'>
                                 <h2>{items.find(i => i?.id == selectedId)?.title}</h2>
                                 <p className='text-9xl'>{items.find(i => i?.id == selectedId)?.description}</p>
