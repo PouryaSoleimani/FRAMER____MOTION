@@ -10,13 +10,13 @@ const items = [
 ];
 
 export default function SharedLayoutExample() {
-  
+
   const [selectedId, setSelectedId] = useState<any>(null);
 
   return (
     <div className="p-10 grid grid-cols-3 gap-4">
       {items.map(item => (
-        <motion.div key={item.id} layoutId={item.id} className="p-6 bg-indigo-900 rounded-md cursor-pointer text-center" onClick={() => {setSelectedId(item?.id) ; console.info(item?.id)}}>
+        <motion.div key={item.id} layoutId={item.id} className="p-6 bg-indigo-900 rounded-md cursor-pointer text-center" onClick={() => { setSelectedId(item?.id); console.info(item?.id) }}>
           <h3 className="text-lg font-semibold">{item.title}</h3>
         </motion.div>
       ))}
