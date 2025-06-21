@@ -8,10 +8,12 @@ import Link from 'next/link';
 
 const DragAndDropPage = () => {
     const count = useMotionValue(0)
+    
     useEffect(() => {
         const controls = animate(count, 100, { duration: 5 })
         return () => controls.stop()
     }, [])
+
     return (
         <div className='p-10 w-screen h-screen'>
             <motion.div
